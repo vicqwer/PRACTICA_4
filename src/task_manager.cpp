@@ -257,9 +257,9 @@ while (xQueueReceive(g_queues.buttons, &btn_msg, 0) == pdTRUE)
 
 xTaskCreate(SensorTask::run, sensor_cfg.name, 4096, &sensor_cfg, 3, &g_handles.sensor);
 xTaskCreate(ServoTask::run, servo_cfg.name, 4096, &servo_cfg, 3, &g_handles.servo);
-xTaskCreate(ButtonTask::run, start_btn_cfg.name, 4096, &start_btn_cfg, 4, &g_handles.start_button);
-xTaskCreate(ButtonTask::run, speed_btn_cfg.name, 4096, &speed_btn_cfg, 4, &g_handles.speed_button);
-xTaskCreate(ReadyLedTask::run, ready_led_cfg.name, 4096, &ready_led_cfg, 1, &g_handles.ready_led);
+xTaskCreate(ButtonTask::run, start_btn_cfg.name, 2048, &start_btn_cfg, 4, &g_handles.start_button);
+xTaskCreate(ButtonTask::run, speed_btn_cfg.name, 2048, &speed_btn_cfg, 4, &g_handles.speed_button);
+xTaskCreate(ReadyLedTask::run, ready_led_cfg.name, 2048, &ready_led_cfg, 1, &g_handles.ready_led);
 xTaskCreate(TaskManager::run, manager_cfg.name, 4096, &manager_cfg, 5, &g_handles.manager);
     }
 }

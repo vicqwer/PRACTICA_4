@@ -199,7 +199,7 @@ namespace App
                 }
             }
 
-            /* -- PROCESAMIENTO DE DATOS DEL SENSOR -- */
+            /*  PROCESAMIENTO DE DATOS DEL SENSOR  */
             if (operating)
             {
                 SensorMsg sensor_msg;
@@ -221,7 +221,7 @@ namespace App
                     }
                 }
 
-                /* -- PROCESAMIENTO DEL ESTADO DEL SERVO -- */
+                /*  PROCESAMIENTO DEL ESTADO DEL SERVO  */
                 ServoStatusMsg servo_status;
                 // Leemos el estado que nos envía la tarea del servo (Moving o Reached)
                 while (xQueueReceive(g_queues.servo_status, &servo_status, 0) == pdTRUE)
@@ -233,7 +233,7 @@ namespace App
                     }
                 }
 
-                /* -- CONTROL DE FINALIZACIÓN DE OPERACIÓN (8 SEGUNDOS) -- */
+                /*  CONTROL DE FINALIZACIÓN DE OPERACIÓN (8 SEGUNDOS) -- */
                 if (reached)
                 {
                     TickType_t now = xTaskGetTickCount();

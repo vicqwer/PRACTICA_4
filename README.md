@@ -327,6 +327,4 @@ En cambio, `#define` solo realiza una sustitución de texto antes de compilar, p
 
 Práctica validada en ESP32.
 El sistema realiza la secuencia Start-operation, lectura del LDR, filtrado por mediana, movimiento gradual del servo, espera de 8 segundos y regreso al estado listo.
-
-```
-```
+---
